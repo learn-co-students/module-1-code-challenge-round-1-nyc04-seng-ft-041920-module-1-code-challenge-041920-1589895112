@@ -10,7 +10,12 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+good = Review.new("me", "parasite", 10)
+Review.new("He", "parasite", 8)
+Review.new("Her", "up", 10)
+Review.new("me", "paprika", 10)
 
+me = Viewer.new("me")
 
 
 
