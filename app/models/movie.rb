@@ -28,4 +28,9 @@ class Movie
     reviews.collect {|review| review.rating}.reduce(0) {|total, sum| total + sum}/reviews.count
   end
 
+  def self.highest_rated
+    # can't you take average_rating here
+    self.all.max_by {|movie| movie.average_rating}
+  end
+
 end
