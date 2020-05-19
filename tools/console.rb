@@ -11,6 +11,12 @@ end
 # so they will be available to test and play around with in your console
 
 
+uncle = Movie.new("The Man from UNCLE")
+zombieland = Movie.new("Zombieland 2: Doubletap")
+spygame = Movie.new("Spy Game")
+mr_mrs_smith = Movie.new("Mr. & Mrs. Smith")
+
+Movie.all
 
 
 
