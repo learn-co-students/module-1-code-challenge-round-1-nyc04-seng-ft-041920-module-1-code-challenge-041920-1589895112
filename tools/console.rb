@@ -9,19 +9,14 @@ end
 # Insert code here to run before hitting the binding.pry
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
-def reviews
-  #returns an array of all the `Review` instances for the `Movie`
-  Review.all.select do |review|
-    review.movie == self
-  end 
-end 
+movie1 = Movie.new("Lord of The Ring")
+movie2 = Movie.new ("Star Wars")
 
-def reviewers
-  #returns an array of all of the `Viewer` instances that reviewed the `Movie
-  self.reviews.map do |movie|
-    movie.viewer
-  end 
-end 
+viewer1 = Viewer.new("coffee_dad")
+viewer2 = Viewer.new ("movie_lover")
+
+review1 = Review.new ("coffee_dad", "Lord of The Ring", 10)
+review2 = Review.new ("movie_lover", "Star Wars", 9)
 
 
 
