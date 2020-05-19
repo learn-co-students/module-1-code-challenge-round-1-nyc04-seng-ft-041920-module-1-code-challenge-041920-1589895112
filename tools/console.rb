@@ -10,7 +10,15 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+#viewer
+kev = Viewer.new('Kevin')
 
+
+#review
+Review.new('Kevin', 'Titanic', 5)
+
+#movie
+titanic = Movie.new('Titanic')
 
 
 
