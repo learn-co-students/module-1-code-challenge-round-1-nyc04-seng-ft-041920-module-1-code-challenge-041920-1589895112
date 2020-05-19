@@ -30,13 +30,13 @@ class Viewer
   end
 
   def rate_movie(movie_name, new_rating)
-    movie = reviews.detect{|review|
+    movie = reviews.detect{|review|             # Stores a Movie associated with this Viewer and their reviews into a Var
       review.movie == movie_name
    }
-    if !reviewed_movie?(movie_name)
-      Review.new(self, movie_name, new_rating)
-    elsif reviewed_movie?(movie_name)
-      movie.rating = new_rating
+    if !reviewed_movie?(movie_name)             # Checks if the movie_name is in reviewed_movie
+      Review.new(self, movie_name, new_rating)  # If it's not it creates a new instance of Review
+    elsif reviewed_movie?(movie_name)           # Checks if the movie_name is in reviewed_movie
+      movie.rating = new_rating                 # If it is it modifies the old rating to equal the value of new_rating.
     end  
   end
 end
