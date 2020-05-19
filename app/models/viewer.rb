@@ -12,4 +12,8 @@ class Viewer
     @@all
   end
   
+  reviewed_movie?(movie) = if (viewer +movie) = true #attempt at pseudocode
+  else = false
+
+  end
 end
