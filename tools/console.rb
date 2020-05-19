@@ -15,8 +15,8 @@ movie2 = Movie.new ("Star Wars")
 viewer1 = Viewer.new("coffee_dad")
 viewer2 = Viewer.new ("movie_lover")
 
-review1 = Review.new ("coffee_dad", "Lord of The Ring", 10)
-review2 = Review.new ("movie_lover", "Star Wars", 9)
+review1 = Review.new (viewer1, movie1, 10)
+review2 = Review.new (viewer2, movie2, 9)
 
 
 
