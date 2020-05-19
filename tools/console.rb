@@ -11,8 +11,17 @@ end
 # so they will be available to test and play around with in your console
 
 
+m1 = Movie.new("Ameli1e")
+v1 = Viewer.new("Emily")
+r1 = Review.new(v1, m1, 5)
+r2 = Review.new(v1, m1, 0)
 
+v1.review = r1
+m1.review = r1
 
+m1.viewer = v1
+
+v1.movie = m1
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
