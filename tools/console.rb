@@ -2,9 +2,8 @@ require 'pry'
 # require and load the environment file
 require_relative '../config/environment.rb'
 
-# require_relative 'models/movie'
-# require_relative 'models/viewer'
-# require_relative 'models/review'
+require 'all'
+
 
 # call this method to reload your models as you write code
 def reload
@@ -17,7 +16,7 @@ end
 
 # Movie is initialized with a title (string)
 m1 = Movie.new("Jaws")
-m2 = Movie.new("Very Bad Things")
+m2 = Movie.new("Very Bad Things")-
 m3 = Movie.new("Now and Then")
 
 # Viewer is initialized with a username (string)

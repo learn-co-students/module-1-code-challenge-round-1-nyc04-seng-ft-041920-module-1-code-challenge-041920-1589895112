@@ -1,3 +1,5 @@
+require 'pry'
+
 class Movie
   attr_reader :title, :reviews
   attr_accessor :reviewers, :average_rating
@@ -9,6 +11,7 @@ class Movie
 
     @@all << self
   end
+end
 
   def title
     @title = title
@@ -17,18 +20,15 @@ class Movie
   
   def reviews
     # returns an array of all the Review instances for the Movie
-   newArray = []
-   Review.all.select do |review|
-    review.movie == self
-    # I want to push the reviews into an array
-   end
+    Review.all.select do |movie|
+      review.movie == self
+    end
+    
   end
 
   def reviewers
     # returns an array of all of the Viewer instances that reviewed the Movie
-   self.all.select do |review|
-    review.reviewer
-    # I want to push the movie's reviews into an array
+    Viewer.all.select do 
   end
 
   def average_rating
@@ -37,11 +37,11 @@ class Movie
   end
 
   def movie.highest_rated
-    # eturns the Movie instance with the highest average rating.
+    # returns the Movie instance with the highest average rating.
   end
 
   def self.all
     @@all
   end
 
-end
+

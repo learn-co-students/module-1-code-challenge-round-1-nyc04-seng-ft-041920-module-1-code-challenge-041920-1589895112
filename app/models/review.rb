@@ -1,6 +1,9 @@
+require 'pry'
+
 class Review
 
-    attr_reader :viewer, :movie, :rating
+    attr_reader :viewer, :movie
+    attr_accessor :rating
 
     @@all = []
 
@@ -12,13 +15,16 @@ class Review
         @@all << self
     end
     
-    def viewer
+    def viewer(viewer_reviewer)
         #returns the Viewer instance associated with the Review instance
-    
+        self.all.find do |review|
+            review.viewer == viewer_reviewer
+        end
     end
 
     #def movie
         #returns the Movie instance associated with the Review instance
+
     #end
 
     def rating
